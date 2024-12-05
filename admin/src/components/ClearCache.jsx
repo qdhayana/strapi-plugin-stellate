@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box } from "@strapi/design-system/Box";
-import { Button } from "@strapi/design-system/Button";
-import { Stack } from "@strapi/design-system/Stack";
-import { Select, Option } from "@strapi/design-system/Select";
+import { Box,Button,Stack,Select, Option } from "@strapi/design-system";
 import { getCollectionTypes, refreshCache } from "../utils/api";
 import { Alert } from "./Alert";
 

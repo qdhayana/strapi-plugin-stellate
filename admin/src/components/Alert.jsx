@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { Alert as StrapiAlert } from "@strapi/design-system/Alert";
+import { Alert as StrapiAlert } from "@strapi/design-system";
 
 export const Alert = ({ variant, onAlertClose }) => (
   <StrapiAlert

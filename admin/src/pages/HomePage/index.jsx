@@ -4,8 +4,7 @@
  *
  */
 import React from "react";
-import { Box } from "@strapi/design-system/Box";
-import { BaseHeaderLayout, ContentLayout } from "@strapi/design-system/Layout";
+import { Box,BaseHeaderLayout, ContentLayout  } from "@strapi/design-system";
 import { ClearCache } from "../../components/ClearCache";
 
 const HomePage = () => {
