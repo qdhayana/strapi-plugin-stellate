@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Flex } from "@strapi/design-system";
 import {
-  Select,
-  Option
-} from "@strapi/design-system/Select";
+  SingleSelect,
+  SingleSelectOption,
+} from '@strapi/design-system';
+
 import { getCollectionTypes, refreshCache } from "../utils/api";
 import { Alert } from "./Alert";
 
@@ -40,7 +41,7 @@ export const ClearCache = () => {
   return (
     <div>
       <Flex direction="column" gap={6}>
-        <Select
+        <SingleSelect
           label="Collections"
           value={collection}
           onChange={setCollection}
@@ -49,14 +50,14 @@ export const ClearCache = () => {
           onClear={handleClear}
         >
           {options.map((option) => (
-            <Option
+            <SingleSelectOption
               key={option}
               value={`purge ${option} cache`}
             >
               {`Purge ${option} cache`}
-            </Option>
+            </SingleSelectOption>
           ))}
-        </Select>
+        </SingleSelect>
         <>
           {showAlert ? (
             <Alert variant={variant} onAlertClose={handleAlertClose} />
