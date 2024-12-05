@@ -5,7 +5,7 @@
  */
 import React from 'react';
 import { Box, Typography, Main } from '@strapi/design-system';
-import ClearCache from '../../components/ClearCache';
+import { ClearCache } from '../../components/ClearCache';
 
 const HomePage = () => {
   return (
@@ -16,11 +16,11 @@ const HomePage = () => {
             Refresh Stellate cache
           </Typography>
         </Box>
-        
-        <Box 
-          background="neutral0" 
-          padding={4} 
-          shadow="filterShadow" 
+
+        <Box
+          background="neutral0"
+          padding={4}
+          shadow="filterShadow"
           hasRadius
         >
           <ClearCache />
