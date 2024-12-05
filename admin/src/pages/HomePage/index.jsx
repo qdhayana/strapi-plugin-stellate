@@ -5,7 +5,7 @@
  */
 import React from 'react';
 import { Box, Typography, Main } from '@strapi/design-system';
-import ClearCache from './ClearCache';
+import ClearCache from '../../components/ClearCache';
 
 const HomePage = () => {
   return (
