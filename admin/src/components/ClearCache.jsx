@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Box,Button,Stack,Select, Option } from "@strapi/design-system";
+import { Box, Button, Flex } from "@strapi/design-system";
+import {
+  Select,
+  Option
+} from "@strapi/design-system/Select";
 import { getCollectionTypes, refreshCache } from "../utils/api";
 import { Alert } from "./Alert";
 
@@ -35,20 +39,22 @@ export const ClearCache = () => {
 
   return (
     <div>
-      <Stack spacing={11}>
+      <Flex direction="column" gap={6}>
         <Select
-          id="collections"
-          required
-          onClear={handleClear}
-          error={error}
+          label="Collections"
           value={collection}
           onChange={setCollection}
+          placeholder="Select a collection"
+          clearLabel="Clear"
+          onClear={handleClear}
         >
           {options.map((option) => (
             <Option
               key={option}
               value={`purge ${option} cache`}
-            >{`Purge ${option} cache`}</Option>
+            >
+              {`Purge ${option} cache`}
+            </Option>
           ))}
         </Select>
         <>
@@ -68,7 +74,7 @@ export const ClearCache = () => {
             </Box>
           )}
         </>
-      </Stack>
+      </Flex>
     </div>
   );
 };
